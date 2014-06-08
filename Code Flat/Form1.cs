@@ -25,8 +25,24 @@ namespace Code_Flat
 
             DialogResult result = dialog.ShowDialog();
 
-            MessageBox.Show(string.Format("Save dialog result: {0}", result));
+            if (result != DialogResult.OK)
+            {
+                return;
+            }
+
+            string filename = dialog.FileName;
+
+            
             // Take info in file and save it
+
+            string text = textBox1.Text;
+
+
+            // Get text from textbox
+            System.IO.File.WriteAllText(filename, text);
+            // Save text
+        
         }
+
     }
 }
