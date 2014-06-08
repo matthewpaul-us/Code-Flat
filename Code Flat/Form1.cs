@@ -43,7 +43,8 @@ namespace Code_Flat
             // Get text from textbox
             System.IO.File.WriteAllText(filename, text);
             // Save text
-        
+
+            MessageBox.Show("Herpaderp saved!");
 
         }
 
