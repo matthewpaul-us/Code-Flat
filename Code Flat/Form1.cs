@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -26,6 +27,7 @@ namespace Code_Flat
             DialogResult result = dialog.ShowDialog();
 
             if (result != DialogResult.OK)
+
             {
                 return;
             }
@@ -42,6 +44,7 @@ namespace Code_Flat
             System.IO.File.WriteAllText(filename, text);
             // Save text
         
+
         }
 
     }
