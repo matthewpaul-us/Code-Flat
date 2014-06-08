@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -25,8 +26,18 @@ namespace Code_Flat
 
             DialogResult result = dialog.ShowDialog();
 
-            MessageBox.Show(string.Format("Save dialog result: {0}", result));
+            if (result != DialogResult.OK)
+                return;
+
+            string filename = dialog.FileName;
             // Take info in file and save it
+
+
+            // Get text from textbox
+            string text = "";
+
+            // Save text
+            File.WriteAllText(filename, text);
         }
     }
 }
